@@ -1,0 +1,351 @@
+<html>
+
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet\index.css">
+        <link rel="stylesheet" href="stylesheet\cake.css">
+        <link rel="stylesheet" href="stylesheet\bulbs.css">
+        <link rel="stylesheet" href="stylesheet\balloons.css">
+        <link rel="stylesheet" href="stylesheet\sidemenu.css">
+        <link rel="stylesheet" href="stylesheet\slideshow.css">
+        <!-- <link rel="stylesheet" href="stylesheet\envelope.css"> -->
+
+        <script src="index.js"></script>
+    
+        <title> Happy Birthday </title>
+
+    </head>
+
+    <body id="body-init">
+
+        <div id="start-btns-div">
+            <button id="start-btn" class="start-button" onclick="displayCake()"> TURN ON LIGHTS </button>
+            <button id="start-btn2" class="start-button display-none" onclick="blowCandle()"> BLOW CANDLE </button>
+        </div>
+    
+        <!-- ########## CAKE ########## -->
+       
+        <div id="cake-container">
+            <div id = "cake1" class="display-none">
+                <div class="plate"></div>
+                <div class="layer layer-bottom"></div>
+                <div class="layer layer-middle"></div>
+                <div class="layer layer-top"></div>
+                <div class="icing"></div>
+                <div class="drip drip1"></div>
+                <div class="drip drip2"></div>
+                <div class="drip drip3"></div>
+                <div class="candle">
+                    <div id = "cake11" class="flame"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ########## AUDIO ########## -->
+
+        <audio id="background-audio" controls loop>
+            <source src="audio\audio.mp3"></source>
+        </audio>
+
+        <!-- ########## BULBS ########## -->
+        
+        <div class="bulb-container display-none">
+            <!-- <div id="bulb" class="bulbs"><img src="images\bulb.png"/></div> -->
+            <div id="blue-bulb" class="bulbs"><img class="bulb-img" src="images\bulb_blue.png"/></div>
+            <div id="green-bulb" class="bulbs"><img class="bulb-img" src="images\bulb_green.png"/></div>
+            <div id="orange-bulb" class="bulbs"><img class="bulb-img" src="images\bulb_orange.png"/></div>
+            <div id="pink-bulb" class="bulbs"><img class="bulb-img" src="images\bulb_pink.png"/></div>
+            <div id="red-bulb" class="bulbs"><img class="bulb-img" src="images\bulb_red.png"/></div>
+            <div id="yellow-bulb" class="bulbs"><img class="bulb-img" src="images\bulb_yellow.png"/></div>
+        </div>
+
+        <!-- ########## BALLOONS ########## -->
+
+        <div id="balloons" class="display-none">
+
+            <!-- BALLOON 1 - -5% -->
+
+            <div class="balloon">  
+                <img src="images\b5.png">
+            </div>
+
+            <!-- BALLOON 2 - 5% -->
+
+            <div class="balloon">  
+               <img src="images\b4.png">
+           </div>
+
+           <!-- BALLOON 3 - 10% -->
+
+           <div class="balloon">  
+               <img src="images\b1.png">
+           </div>
+
+           <!-- BALLOON 4 - 15% -->
+
+           <div class="balloon">
+               <img src="images\b3.png">
+           </div>
+
+           <!-- BALLOON 5 - 20% -->
+
+           <div class="balloon">
+               <img src="images\b5.png">
+           </div>
+
+           <!-- BALLOON 6 - 25% -->
+
+           <div class="balloon">
+               <img src="images\b2.png">
+           </div>
+
+           <!-- BALLOON 7 - 30% -->
+
+           <div class="balloon">
+               <img src="images\b4.png">
+           </div>
+
+           <!-- BALLOON 8 - 35% -->
+           
+           <div class="balloon">
+               <img src="images\b7.png">
+           </div>
+
+           <!-- BALLOON 9 - 40% -->
+
+           <div class="balloon">
+               <img src="images\b6.png">
+           </div>
+
+           <!-- BALLOON 10 - 45% -->
+
+           <div class="balloon">
+               <img src="images\b3.png">
+           </div>
+
+           <!-- BALLOON 11 - 50% -->
+           
+           <div class="balloon">
+               <img src="images\b2.png">
+           </div>
+
+           <!-- BALLOON 12 - 55% -->
+
+           <div class="balloon">
+               <img src="images\b1.png">
+           </div>
+
+           <!-- BALLOON 13 - 60% -->
+           
+           <div class="balloon">
+               <img src="images\b7.png">
+           </div>
+
+           <!-- BALLOON 14 - 65% -->
+
+           <div class="balloon">
+               <img src="images\b5.png">
+           </div>
+
+           <!-- BALLOON 15 - 70% -->
+
+           <div class="balloon">
+               <img src="images\b6.png">
+           </div>
+
+           <!-- BALLOON 16 - 75% -->
+
+           <div class="balloon">
+               <img src="images\b4.png">
+           </div>
+
+           <!-- BALLOON 17 - 80% -->
+
+           <div class="balloon">
+               <img src="images\b3.png">
+           </div>
+
+           <!-- BALLOON 18 - 85% -->
+
+           <div class="balloon">
+               <img src="images\b7.png">
+           </div>
+
+           <!-- BALLOON 19 - 90% -->
+
+           <div class="balloon">
+               <img src="images\b1.png">
+           </div>
+
+           <!-- BALLOON 20 - 95% -->
+
+           <div class="balloon">
+               <img src="images\b7.png">
+           </div>
+
+           <!-- ########## SIDE MENU ########## -->
+
+        <aside>
+            <div id="side-menu" class="display-none">
+                <div class="toggle-btn" onclick="toggleSideBar()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li class="sidebar-title">MENU</li>
+                    <li onclick="showHome()">Home</li>
+                    <li onclick="showMemories()">Memories</li>
+                    <li onclick="showPhotoGallery()">Photo Gallery</li>
+                    <li onclick="showQuizes()">Quizes</li>
+                    <li onclick="showAbout()">About</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- ########## TITLE ########## -->
+
+        <div id="title-container" class="display-none">
+            <div class="title-label"><h2> HAPPY BIRTHDAY JEET</h2></div>
+        </div>
+
+        <!-- ########## 3D SLIDE SHOW ########## -->
+
+        <div id="photo-slideshow" class="display-none">
+            <section class="slideshow">
+                <div class="content">
+                    <div class="content-carrousel">
+                        <figure class ="shadow"><img src="images\slideshow_image1.jpg"></figure>
+                        <figure class ="shadow"><img src="images\slideshow_image2.jpg"></figure>
+                        <figure class ="shadow"><img src="images\slideshow_image3.jpg"></figure>
+                        <figure class ="shadow"><img src="images\slideshow_image4.jpg"></figure>
+                        <figure class ="shadow"><img src="Images\slideshow_image5.jpg"></figure>
+                        <figure class ="shadow"><img src="Images\slideshow_image6.jpg"></figure>
+                        <figure class ="shadow"><img src="Images\slideshow_image7.jpg"></figure>
+                        <figure class ="shadow"><img src="Images\slideshow_image8.jpg"></figure>
+                        <figure class ="shadow"><img src="Images\slideshow_image9.jpg"></figure>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ########## QUIZES ########## -->
+
+        <div id="quiz">
+
+            <!-- ########## QUIZ 1 ########## -->
+
+            <div id="quiz1" class="display-none">
+                <h3 class="quiz-question">
+                    QUIZ 1
+                    Yaayla Re Ladki Mast Mast Tu Aaila Re
+                    Yaayla Re Ladki Mast Mast Tu Aaila Re
+                    Phir Se Bol Zara Jo Tu Bola Re
+                </h3>
+   
+                <div class="quiz-textbox-container">
+                    <input type="text" id="quiz-textbox1_1" class="quiz-textbox" onchange="capitalizeTextboxContents(1)" placeholder="Enter Answer 1"/>
+                    <input type="text" id="quiz-textbox1_2" class="quiz-textbox" onchange="capitalizeTextboxContents(1)" placeholder="Enter Answer 2"/>
+                    <input type="text" id="quiz-textbox1_3" class="quiz-textbox" onchange="capitalizeTextboxContents(1)" placeholder="Enter Answer 3"/>
+                    <input type="text" id="quiz-textbox1_4" class="quiz-textbox" onchange="capitalizeTextboxContents(1)" placeholder="Enter Answer 4"/>
+                    <input type="text" id="quiz-textbox1_5" class="quiz-textbox" onchange="capitalizeTextboxContents(1)" placeholder="Enter Answer 5"/>
+                    <input type="text" id="quiz-textbox1_6" class="quiz-textbox" onchange="capitalizeTextboxContents(1)" placeholder="Enter Answer 6"/>
+                    <input type="text" id="quiz-textbox1_7" class="quiz-textbox" onchange="capitalizeTextboxContents(1)" placeholder="Enter Answer 7"/>
+                    <input type="text" id="quiz-textbox1_8" class="quiz-textbox" onchange="capitalizeTextboxContents(1)" placeholder="Enter Answer 8"/>
+                    <input type="text" id="quiz-textbox1_9" class="quiz-textbox" onchange="capitalizeTextboxContents(1)" placeholder="Enter Answer 9"/>
+                    <input type="text" id="quiz-textbox1_10" class="quiz-textbox" onchange="capitalizeTextboxContents(1)" placeholder="Enter Answer 10"/>
+                </div>
+
+                <div class="quiz-button-container">
+                    <button type="submit" id="submit-quiz1" class="quiz-button" onclick="checkQuiz1()"> Submit </button>
+                </div>
+
+                <div class="video-container">
+                    <video height="300" id="video1" class="display-none" controls hidden>
+                        <source src="videos\video1.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+            </div>
+
+            <!-- ########## QUIZ 2 ########## -->
+
+            <div id="quiz2" class="display-none">
+                <h3 class="quiz-question">
+                    QUIZ 2
+                    Yaayla Re Ladki Mast Mast Tu Aaila Re
+                    Yaayla Re Ladki Mast Mast Tu Aaila Re
+                    Phir Se Bol Zara Jo Tu Bola Re
+                </h3>
+
+                <div class="quiz-textbox-container">
+                    <input type="text" id="quiz-textbox2_1" class="quiz-textbox" onchange="capitalizeTextboxContents(2)" placeholder="Enter Answer 1"/>
+                    <input type="text" id="quiz-textbox2_2" class="quiz-textbox" onchange="capitalizeTextboxContents(2)" placeholder="Enter Answer 2"/>
+                    <input type="text" id="quiz-textbox2_3" class="quiz-textbox" onchange="capitalizeTextboxContents(2)" placeholder="Enter Answer 3"/>
+                    <input type="text" id="quiz-textbox2_4" class="quiz-textbox" onchange="capitalizeTextboxContents(2)" placeholder="Enter Answer 4"/>
+                    <input type="text" id="quiz-textbox2_5" class="quiz-textbox" onchange="capitalizeTextboxContents(2)" placeholder="Enter Answer 5"/>
+                    <input type="text" id="quiz-textbox2_6" class="quiz-textbox" onchange="capitalizeTextboxContents(2)" placeholder="Enter Answer 6"/>
+                    <input type="text" id="quiz-textbox2_7" class="quiz-textbox" onchange="capitalizeTextboxContents(2)" placeholder="Enter Answer 7"/>
+                    <input type="text" id="quiz-textbox2_8" class="quiz-textbox" onchange="capitalizeTextboxContents(2)" placeholder="Enter Answer 8"/>
+                    <input type="text" id="quiz-textbox2_9" class="quiz-textbox" onchange="capitalizeTextboxContents(2)" placeholder="Enter Answer 9"/>
+                </div>
+
+                <div class="quiz-button-container">
+                    <button type="submit" id="submit-quiz2" class="quiz-button" onclick="checkQuiz2()"> Submit </button>
+                </div>
+
+                <div class="video-container">
+                    <video height="300" id="video2" class="display-none" controls hidden>
+                        <source src="videos\video2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <!-- ########## QUIZ 3 ########## -->
+
+            <div id="quiz3" class="display-none">
+                <h3 class="quiz-question">
+                    QUIZ 3
+                    Yaayla Re Ladki Mast Mast Tu Aaila Re
+                    Yaayla Re Ladki Mast Mast Tu Aaila Re
+                    Phir Se Bol Zara Jo Tu Bola Re
+                </h3>
+
+                <div class="quiz-textbox-container">
+                    <input type="text" id="quiz-textbox3_1" class="quiz-textbox" onchange="capitalizeTextboxContents(3)" placeholder="Enter Your Answer"/>
+                </div>
+
+                <div class="quiz-button-container">
+                    <button type="submit" id="submit-quiz3" class="quiz-button" onclick="checkQuiz3()"> Submit </button>
+                </div>
+
+                <div class="video-container">
+                    <video height="300" id="video3" class="display-none" controls hidden>
+                        <source src="videos\video3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <!-- ########## POST QUIZ - THANK YOU ########## -->
+
+            <div id="post-quiz" class="display-none">
+                <h2>
+                    THANK YOU.!
+                </h2>
+            </div>
+        </div>
+
+        <!-- ########## ENVELOPE ########## -->
+
+        <div class="wrapper">
+            <div class="mail">
+                <div class="cover"></div>
+                <div class="letter"><p>Test 123...</p></div>
+            </div>
+        </div>
+
+    </body>
+    
+</html>
